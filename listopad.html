@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wrzesień</title>
+    <title>Listopad</title>
 </head>
 
 <style>
     body {
       font-family: Arial, sans-serif;
-       background-image: url('listopad.png');
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-size: 100% 100%;
+      background-image: url('listopad.png');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: 100% 100%;
       margin: 0;
       padding: 0;
     }
@@ -26,7 +26,6 @@
       font-weight: bold;
     }
 
-    /* Galeria w siatce */
     #main {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
@@ -44,7 +43,6 @@
       box-shadow: 0 4px 12px rgba(0,0,0,0.4);
     }
 
-    /* Modal */
     .modal {
       display: none;
       position: fixed;
@@ -75,6 +73,7 @@
       max-width: 600px;
       border-radius: 8px;
     }
+
     .close {
       position: absolute;
       right: 15px;
@@ -82,11 +81,11 @@
       font-size: 28px;
       cursor: pointer;
       color: #555;
-      transition: color 0.3s;
     }
     .close:hover {
       color: #000;
     }
+
     .nav-btn {
       cursor: pointer;
       font-size: 30px;
@@ -105,19 +104,17 @@
     .prev { left: -60px; }
     .next { right: -60px; }
 
-    /* Opis zdjęcia */
     #modalText {
       margin-top: 15px;
       padding: 10px 15px;
       background: rgba(0,0,0,0.75);
       color: #fff;
       border-radius: 6px;
-      display: block;       /* zamiast inline-block */
+      display: block;
       font-size: 16px;
-      text-align: center;   /* żeby był wyśrodkowany */
+      text-align: center;
     }
 
-    /* Responsywność */
     @media (max-width: 600px) {
       #main {
         grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
@@ -128,26 +125,21 @@
       .prev { left: -40px; }
       .next { right: -40px; }
     }
-  </style>
+</style>
 
 <body>
 
-       <a href="pamietnik.html" id="powrot">Powrót</a>
+<a href="pamietnik.html" id="powrot">Powrót</a>
 
-    <div id="main">
-  
-        <img src="love/listopad (1).jpg" alt="1" class="gallery-img">
-        <img src="love/listopad (2).jpg" alt="2" class="gallery-img">
-        <img src="love/listopad (3).jpg" alt="3" class="gallery-img">
-        <img src="love/listopad (4).jpg" alt="4" class="gallery-img">
-        <img src="love/listopad (5).jpg" alt="5" class="gallery-img">
-       
-       
+<div id="main">
+    <img src="love/listopad (1).jpg" alt="1" class="gallery-img">
+    <img src="love/listopad (2).jpg" alt="2" class="gallery-img">
+    <img src="love/listopad (3).jpg" alt="3" class="gallery-img">
+    <img src="love/listopad (4).jpg" alt="4" class="gallery-img">
+    <img src="love/listopad (5).jpg" alt="5" class="gallery-img">
+</div>
 
-
-    </div>
-
-    <div id="myModal" class="modal" onclick="closeModal()">
+<div id="myModal" class="modal" onclick="closeModal()">
   <div class="modal-content" onclick="event.stopPropagation()">
     <span class="close" onclick="closeModal()">&times;</span>
     <span class="nav-btn prev" onclick="prevImg()">&#10094;</span>
@@ -159,51 +151,50 @@
 
 <script>
 
-    const img1 = {src:'love//listopad (1).jpg', text:'Opis zdjęcia 1'};
-    const img2 = {src:'listopad (2).jpg', text:'Opis zdjęcia 1'};
-    const img3 = {src:'love/listopad (3).jpg', text:'Opis zdjęcia 1'};
-    const img4 = {src:'love/listopad (4).jpg', text:'Opis zdjęcia 1'};
-    const img5 = {src:'love/listopad (5).jpg', text:'Opis zdjęcia 1'};
-  
-  
-    
+const img1 = {src:'love/listopad (1).jpg', text:'Opis zdjęcia 1'};
+const img2 = {src:'love/listopad (2).jpg', text:'Opis zdjęcia 2'};
+const img3 = {src:'love/listopad (3).jpg', text:'Opis zdjęcia 3'};
+const img4 = {src:'love/listopad (4).jpg', text:'Opis zdjęcia 4'};
+const img5 = {src:'love/listopad (5).jpg', text:'Opis zdjęcia 5'};
 
+const images = [img1, img2, img3, img4, img5];
 
-    const images = [
-    img1, img2, img3, img4, img5
-  ];
+let currentIndex = 0;
 
-    let currentIndex = 0;
+function openModal(i) {
+  currentIndex = i;
+  showImg();
+  const modal = document.getElementById("myModal");
+  modal.style.display = "flex";
+  modal.classList.add("show");
+}
 
-  function openModal(i) {
-    currentIndex = i;
-    showImg();
-    const modal = document.getElementById("myModal");
-    modal.style.display = "flex";
-    modal.classList.add("show");
-  }
-  function closeModal() {
-    const modal = document.getElementById("myModal");
-    modal.classList.remove("show");
-    setTimeout(() => modal.style.display = "none", 300);
-  }
-  function prevImg(){
-    currentIndex = (currentIndex - 1 + images.length) % images.length;
-    showImg();
-  }
-  function nextImg(){
-    currentIndex = (currentIndex + 1) % images.length;
-    showImg();
-  }
-  function showImg(){
-    const imgData = images[currentIndex];
-    document.getElementById("modalImg").src = imgData.src;
-    document.getElementById("modalText").innerText = imgData.text;
-  }
+function closeModal() {
+  const modal = document.getElementById("myModal");
+  modal.classList.remove("show");
+  setTimeout(() => modal.style.display = "none", 300);
+}
 
-  document.querySelectorAll(".gallery-img").forEach((img, index) => {
-    img.addEventListener("click", () => openModal(index));
-  });
+function prevImg(){
+  currentIndex = (currentIndex - 1 + images.length) % images.length;
+  showImg();
+}
+
+function nextImg(){
+  currentIndex = (currentIndex + 1) % images.length;
+  showImg();
+}
+
+function showImg(){
+  const imgData = images[currentIndex];
+  document.getElementById("modalImg").src = imgData.src;
+  document.getElementById("modalText").innerText = imgData.text;
+}
+
+document.querySelectorAll(".gallery-img").forEach((img, index) => {
+  img.addEventListener("click", () => openModal(index));
+});
+
 </script>
 
 </body>
