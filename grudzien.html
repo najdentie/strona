@@ -37,6 +37,7 @@
       border-radius: 10px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.2);
       transition: transform 0.3s, box-shadow 0.3s;
+      cursor: pointer;
     }
     #main img:hover {
       transform: scale(1.05);
@@ -132,28 +133,30 @@
 <a href="pamietnik.html" id="powrot">Powrót</a>
 
 <div id="main">
-   <img src="love/grudzien (1).jpeg" alt="1" class="gallery-img">
-   <img src="love/grudzien (1).jpg" alt="1" class="gallery-img">
-<img src="love/grudzien (2).jpeg" alt="2" class="gallery-img">
-<img src="love/grudzien (3).jpeg" alt="3" class="gallery-img">
-<img src="love/grudzien (4).jpeg" alt="4" class="gallery-img">
-<img src="love/grudzien (5).jpeg" alt="5" class="gallery-img">
-<img src="love/grudzien (6).jpeg" alt="6" class="gallery-img">
-<img src="love/grudzien (7).jpeg" alt="7" class="gallery-img">
-<img src="love/grudzien (8).jpeg" alt="8" class="gallery-img">
-<img src="love/grudzien (9).jpeg" alt="9" class="gallery-img">
-<img src="love/grudzien (10).jpeg" alt="10" class="gallery-img">
-<img src="love/grudzien (11).jpeg" alt="11" class="gallery-img">
-<img src="love/grudzien (12).jpeg" alt="12" class="gallery-img">
-<img src="love/grudzien (13).jpeg" alt="13" class="gallery-img">
-<img src="love/grudzien (14).jpeg" alt="14" class="gallery-img">
-<img src="love/grudzien (15).jpeg" alt="15" class="gallery-img">
-<img src="love/grudzien (16).jpeg" alt="16" class="gallery-img">
-<img src="love/grudzien (17).jpeg" alt="17" class="gallery-img">
-<img src="love/grudzien (18).jpeg" alt="18" class="gallery-img">
-<img src="love/grudzien (19).jpeg" alt="19" class="gallery-img">
-<img src="love/grudzien (20).jpeg" alt="20" class="gallery-img">
+  <!-- 20 JPEG -->
+  <img src="love/grudzien (1).jpeg" alt="1" class="gallery-img">
+  <img src="love/grudzien (2).jpeg" alt="2" class="gallery-img">
+  <img src="love/grudzien (3).jpeg" alt="3" class="gallery-img">
+  <img src="love/grudzien (4).jpeg" alt="4" class="gallery-img">
+  <img src="love/grudzien (5).jpeg" alt="5" class="gallery-img">
+  <img src="love/grudzien (6).jpeg" alt="6" class="gallery-img">
+  <img src="love/grudzien (7).jpeg" alt="7" class="gallery-img">
+  <img src="love/grudzien (8).jpeg" alt="8" class="gallery-img">
+  <img src="love/grudzien (9).jpeg" alt="9" class="gallery-img">
+  <img src="love/grudzien (10).jpeg" alt="10" class="gallery-img">
+  <img src="love/grudzien (11).jpeg" alt="11" class="gallery-img">
+  <img src="love/grudzien (12).jpeg" alt="12" class="gallery-img">
+  <img src="love/grudzien (13).jpeg" alt="13" class="gallery-img">
+  <img src="love/grudzien (14).jpeg" alt="14" class="gallery-img">
+  <img src="love/grudzien (15).jpeg" alt="15" class="gallery-img">
+  <img src="love/grudzien (16).jpeg" alt="16" class="gallery-img">
+  <img src="love/grudzien (17).jpeg" alt="17" class="gallery-img">
+  <img src="love/grudzien (18).jpeg" alt="18" class="gallery-img">
+  <img src="love/grudzien (19).jpeg" alt="19" class="gallery-img">
+  <img src="love/grudzien (20).jpeg" alt="20" class="gallery-img">
 
+  <!-- 1 JPG -->
+  <img src="love/grudzien (1).jpg" alt="1" class="gallery-img">
 </div>
 
 <div id="myModal" class="modal" onclick="closeModal()">
@@ -167,37 +170,35 @@
 </div>
 
 <script>
-
-const img111 = {src:'love/grudzien (1).jpg', text:'Opis zdjęcia 1'};
-const img1 = {src:'love/grudzien (1).jpeg', text:'Opis zdjęcia 1'};
-const img2 = {src:'love/grudzien (2).jpeg', text:'Opis zdjęcia 2'};
-const img3 = {src:'love/grudzien (3).jpeg', text:'Opis zdjęcia 3'};
-const img4 = {src:'love/grudzien (4).jpeg', text:'Opis zdjęcia 4'};
-const img5 = {src:'love/grudzien (5).jpeg', text:'Opis zdjęcia 5'};
-const img6 = {src:'love/grudzien (6).jpeg', text:'Opis zdjęcia 6'};
-const img7 = {src:'love/grudzien (7).jpeg', text:'Opis zdjęcia 7'};
-const img8 = {src:'love/grudzien (8).jpeg', text:'Opis zdjęcia 8'};
-const img9 = {src:'love/grudzien (9).jpeg', text:'Opis zdjęcia 9'};
-const img10 = {src:'love/grudzien (10).jpeg', text:'Opis zdjęcia 10'};
-const img11 = {src:'love/grudzien (11).jpeg', text:'Opis zdjęcia 11'};
-const img12 = {src:'love/grudzien (12).jpeg', text:'Opis zdjęcia 12'};
-const img13 = {src:'love/grudzien (13).jpeg', text:'Opis zdjęcia 13'};
-const img14 = {src:'love/grudzien (14).jpeg', text:'Opis zdjęcia 14'};
-const img15 = {src:'love/grudzien (15).jpeg', text:'Opis zdjęcia 15'};
-const img16 = {src:'love/grudzien (16).jpeg', text:'Opis zdjęcia 16'};
-const img17 = {src:'love/grudzien (17).jpeg', text:'Opis zdjęcia 17'};
-const img18 = {src:'love/grudzien (18).jpeg', text:'Opis zdjęcia 18'};
-const img19 = {src:'love/grudzien (19).jpeg', text:'Opis zdjęcia 19'};
-const img20 = {src:'love/grudzien (20).jpeg', text:'Opis zdjęcia 20'};
-
+const img1jpeg = {src:'love/grudzien (1).jpeg', text:'Opis zdjęcia 1'};
+const img2jpeg = {src:'love/grudzien (2).jpeg', text:'Opis zdjęcia 2'};
+const img3jpeg = {src:'love/grudzien (3).jpeg', text:'Opis zdjęcia 3'};
+const img4jpeg = {src:'love/grudzien (4).jpeg', text:'Opis zdjęcia 4'};
+const img5jpeg = {src:'love/grudzien (5).jpeg', text:'Opis zdjęcia 5'};
+const img6jpeg = {src:'love/grudzien (6).jpeg', text:'Opis zdjęcia 6'};
+const img7jpeg = {src:'love/grudzien (7).jpeg', text:'Opis zdjęcia 7'};
+const img8jpeg = {src:'love/grudzien (8).jpeg', text:'Opis zdjęcia 8'};
+const img9jpeg = {src:'love/grudzien (9).jpeg', text:'Opis zdjęcia 9'};
+const img10jpeg = {src:'love/grudzien (10).jpeg', text:'Opis zdjęcia 10'};
+const img11jpeg = {src:'love/grudzien (11).jpeg', text:'Opis zdjęcia 11'};
+const img12jpeg = {src:'love/grudzien (12).jpeg', text:'Opis zdjęcia 12'};
+const img13jpeg = {src:'love/grudzien (13).jpeg', text:'Opis zdjęcia 13'};
+const img14jpeg = {src:'love/grudzien (14).jpeg', text:'Opis zdjęcia 14'};
+const img15jpeg = {src:'love/grudzien (15).jpeg', text:'Opis zdjęcia 15'};
+const img16jpeg = {src:'love/grudzien (16).jpeg', text:'Opis zdjęcia 16'};
+const img17jpeg = {src:'love/grudzien (17).jpeg', text:'Opis zdjęcia 17'};
+const img18jpeg = {src:'love/grudzien (18).jpeg', text:'Opis zdjęcia 18'};
+const img19jpeg = {src:'love/grudzien (19).jpeg', text:'Opis zdjęcia 19'};
+const img20jpeg = {src:'love/grudzien (20).jpeg', text:'Opis zdjęcia 20'};
+const img1jpg = {src:'love/grudzien (1).jpg', text:'Opis zdjęcia 1'};
 
 const images = [
-img111, img1, img2, img3, img4, img5,
-img6, img7, img8, img9, img10,
-img11, img12, img13, img14, img15,
-img16, img17, img18, img19, img20
+img1jpeg, img2jpeg, img3jpeg, img4jpeg, img5jpeg,
+img6jpeg, img7jpeg, img8jpeg, img9jpeg, img10jpeg,
+img11jpeg, img12jpeg, img13jpeg, img14jpeg, img15jpeg,
+img16jpeg, img17jpeg, img18jpeg, img19jpeg, img20jpeg,
+img1jpg
 ];
-
 
 let currentIndex = 0;
 
@@ -234,11 +235,7 @@ function showImg(){
 document.querySelectorAll(".gallery-img").forEach((img, index) => {
   img.addEventListener("click", () => openModal(index));
 });
-
 </script>
 
 </body>
-
 </html>
-
-
