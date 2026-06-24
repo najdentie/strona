@@ -1,116 +1,174 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pamiętnik</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pamiętnik</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
     background-image: url('sky.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100% 100%;
-      color: #333;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-    /* Nagłówek */
-    #header {
-      text-align: center;
-      margin-top: 50px;
-    }
-    #header h1 {
-      font-size: 2.5rem;
-      color: #d6336c;
-      margin: 0;
-    }
-    #header h2 {
-      font-size: 1.2rem;
-      color: #555;
-      margin-top: 5px;
-      font-weight: normal;
-    }
+/* Nagłówek */
+#header {
+    text-align: center;
+    margin-top: 50px;
+}
 
-    /* Główna sekcja */
-    #main {
-      text-align: center;
-      margin-top: 50px;
-      max-width: 900px;
-    }
-    #main h1 {
-      font-size: 1.8rem;
-      margin-bottom: 30px;
-      color: #333;
-    }
+#header h1 {
+    font-size: 2.5rem;
+    color: #d6336c;
+    margin: 0;
+}
 
-    /* Kafelki miesięcy */
-    .months {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-      gap: 20px;
-      justify-content: center;
-    }
-    .months a {
-      display: block;
-      padding: 15px 25px;
-      border-radius: 12px;
-      background: #fff;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      font-size: 1.2rem;
-      color: #333;
-      text-decoration: none;
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-    .months a:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 6px 16px rgba(0,0,0,0.2);
-    }
+#header h2 {
+    font-size: 1.2rem;
+    color: #555;
+    margin-top: 5px;
+    font-weight: normal;
+}
 
-    /* Stopka */
-    footer {
-      text-align: center;
-      margin-top: auto;
-      margin-bottom: 20px;
-      font-style: italic;
-      color: #666;
-    }
-  </style>
-  
+/* Główna sekcja */
+#main {
+    text-align: center;
+    margin-top: 40px;
+    max-width: 1000px;
+    width: 90%;
+}
+
+/* Zakładki lat */
+.years {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.years a {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 12px;
+    background: #d6336c;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.years a:hover {
+    background: #b8295a;
+}
+
+/* Sekcje lat */
+.year-section {
+    margin-bottom: 60px;
+}
+
+.year-section h2 {
+    color: #d6336c;
+    margin-bottom: 25px;
+}
+
+/* Kafelki miesięcy */
+.months {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
+}
+
+.months a {
+    display: block;
+    padding: 15px 25px;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    font-size: 1.1rem;
+    color: #333;
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.months a:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+}
+
+/* Stopka */
+footer {
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: 20px;
+    font-style: italic;
+    color: #666;
+}
+</style>
 </head>
+
 <body>
 
-  <div id="header">
+<div id="header">
     <h1>📖 Pamiętnik Gabi & Łuki 📖</h1>
     <h2>💞 27.05.2025 - na zawsze 💞</h2>
-  </div>
+</div>
 
-  <div id="main">
-    <h1>Wybierz miesiąc</h1>
-    <div class="months">
-     
-      <a href="czerwiec.html">🌸 Czerwiec</a>
-      <a href="lipiec.html">☀️ Lipiec</a>
-      <a href="sierpien.html">🌻 Sierpień</a>
-      <a href="wrzesien.html">🎓 Wrzesień</a>
-      <a href="pazdziernik.html">💅🏻 Październik</a>
-      <a href="listopad.html">🧣 Listopad</a>
-      <a href="grudzien.html">🎅 Grudzien</a>
-      <a href="styczen.html">🥂 Styczeń</a>
-   
+<div id="main">
+
+    <div class="years">
+        <a href="#2025">📅 Rok 2025</a>
+        <a href="#2026">📅 Rok 2026</a>
     </div>
-  </div>
 
-  <footer>
+    <div id="2025" class="year-section">
+        <h2>📖 Rok 2025</h2>
+
+        <div class="months">
+            <a href="czerwiec.html">🌸 Czerwiec</a>
+            <a href="lipiec.html">☀️ Lipiec</a>
+            <a href="sierpien.html">🌻 Sierpień</a>
+            <a href="wrzesien.html">🎓 Wrzesień</a>
+            <a href="pazdziernik.html">💅🏻 Październik</a>
+            <a href="listopad.html">🧣 Listopad</a>
+            <a href="grudzien.html">🎅 Grudzień</a>
+        </div>
+    </div>
+
+    <div id="2026" class="year-section">
+        <h2>📖 Rok 2026</h2>
+
+        <div class="months">
+            <a href="styczen.html">🥂 Styczeń</a>
+            <a href="luty.html">❄️ Luty</a>
+            <a href="marzec.html">🌷 Marzec</a>
+            <a href="kwiecien.html">🌼 Kwiecień</a>
+            <a href="maj.html">🌺 Maj</a>
+            <a href="czerwiec26.html">🌸 Czerwiec</a>
+            <a href="lipiec26.html">☀️ Lipiec</a>
+            <a href="sierpien26.html">🌻 Sierpień</a>
+            <a href="wrzesien26.html">🎓 Wrzesień</a>
+            <a href="pazdziernik26.html">🍂 Październik</a>
+            <a href="listopad26.html">🧣 Listopad</a>
+            <a href="grudzien26.html">🎄 Grudzień</a>
+        </div>
+    </div>
+
+</div>
+
+<footer>
     <p>💞 Zawsze przy tobie 💞</p>
-  </footer>
+</footer>
 
 </body>
 </html>
-
-
-
+```
